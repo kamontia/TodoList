@@ -1,0 +1,43 @@
+body {
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: auto;
+}
+
+#app h1 {
+  font-size: 30px;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+}
+
+#app li {
+  line-height: 1.5;
+}
+
+#app input[type="text"] {
+  padding: 4px;
+}
+
+.commands {
+  font-size: 14px;
+  cursor: pointer;
+  color: #33c;
+}
+
+#app ul {
+  padding: 0px;
+  list-style: none;
+}
+
+#app li > span.done {
+  text-decoration: line-through;
+  color: #ddd;
+}
+
+#app h1 > button {
+  float: right;
+}

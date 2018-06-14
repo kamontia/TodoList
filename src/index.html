@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Task List(Vue.js)</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div id="app" class="container">
+    <h1>
+      Todo List
+      <span class="info">({{ countTask.length}}/{{todos.length}})</span>
+      <button v-on:click="deleteCompltedTask">delete CompltedTask</button>
+    </h1>
+    <form v-on:submit.prevent="addTask">
+      <input type="text" v-model="newTask">
+      <input type="submit" value="add">
+    </form>
+    <ul>
+      <li v-for="(todo,index) in todos">
+        <input type="checkbox" v-model="todo.isDone">
+        <span v-bind:class="{done: todo.isDone}">{{todo.name}}</span>
+        <span v-on:click="deleteTask(index)" class="commands"> [ del ] </span>
+      </li>
+      <li v-show="0==todos.length">You have no Task</li>
+    </ul>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
